@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="http://www.swin.edu.au"><img src ="logo.png" width="100" height="50"></a>
+    <h1>CWA Help Desk Appointment</h1>
+    <p>The Help Desk is located in ATC620. Open 10:30 to 19:00 Monday to Friday</p>
+    <p>Check Blackboard for when CWA tutors will be there.</p>
+    <form method="post" action="http://mercury.swin.edu.au/it000000/formtest.php">
+        <fieldset>
+            <legend>Student details</legend>
+            <p><label for="student_id">Student ID</label>
+              <input type="text" name="Student_ID" id="student_id" required="required" pattern="[0-9]{7,10}">
+            </p>
+            <p>
+                <label for="gv">Given Name</label>
+                    <input id="gv" type="text" name="Given Name" maxlength="15" required="required" pattern="[A-Za-z]+"> 
+                <label for="fn">Family Name</label>
+                    <input id="fn" type="text" name="Family Name" maxlength="15" required="required" pattern="[A-Za-z]+"> 
+            </p>
+        </fieldset>
+        <fieldset>
+            <legend>Your unit</legend>
+            <label><input type="radio" name="things[]" value="COS10011" required="required">COS10011</label>
+            <label><input type="radio" name="things[]" value="COS60004">COS10004</label>
+            <label><input type="radio" name="things[]" value="COS60007">COS10007</label>
+            <br>
+            <p>
+                <label for="your_tutor">Your tutor</label>
+                <select id="your_tutor" name="Your tutor" required="required">
+                    <option value="">Please Select</option>
+                    <option value="Tiger">Tiger</option>
+                    <option value="Dung">Dung</option>
+                    <option value="Rory">Rory</option>
+                    <option value="Wilson">Wilson</option>
+                </select>
+            </p>
+        </fieldset>
+        <fieldset>
+            <legend>Issue</legend>
+            <label>HTML <input type="checkbox" name="category[]" value="HTML" checked="checked"></label>
+            <label>CSS <input type="checkbox" name="category[]" value="CSS"></label>
+            <label>JavaScript <input type="checkbox" name="category[]" value="JavaScript"></label>
+            <label>PHP <input type="checkbox" name="category[]" value="PHP"></label>
+            <label>MySQL <input type="checkbox" name="category[]" value="MySQL"></label>
+            <br>
+            <label for="DoI">Description of Issue</label><br>
+            <textarea id="DoI" name="Description of Issue" rows="4" cols="30" placeholder="Write description of your problem here..."></textarea>
+        </fieldset>
+        <fieldset>
+            <legend>Preferred Date / Time</legend>
+            <label>Date <input type="text" name="Date" placeholder="dd/mm/yyyy" pattern="\d{2}/\d{2}/\d{4}"> </label><br>
+            <label>Time <input type="text" name="Time" placeholder="00:00" pattern="\d{2}:\d{2}"></label>
+        </fieldset>
+        <input type="submit" value="Book">
+        <input type="reset" value="Reset form">
+    </form>
+</body>
+</html>
